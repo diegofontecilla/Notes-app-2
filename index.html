@@ -1,7 +1,23 @@
-<script src="controller/note-controller.js"></script>
+<html>
+<head></head>
 
-<script type="text/javascript">
-  console.log(document.getElementById("app"))
-</script>
+<body>
 
 <div id="app"> hello  </div>
+
+
+<script src="lib/note-model.js"></script>
+<script src="lib/note-list-view.js"></script>
+<script src="lib/note-list-model.js"></script>
+<script src="controller/note-controller.js"></script>
+<script type="text/javascript">
+    var text = "Favourite drink: seltzer"
+    var notelist = new Notelist();
+    notelist.store(text)
+    var notecontroller = new NoteController(notelist);
+    notecontroller.display();
+</script>
+
+</body>
+
+</html>
